@@ -9,6 +9,7 @@ class Student{
     string name;
     string course;
     int age;
+    int ID;
     float CGPA;
     bool chronicIlness;
     static int studentCounter;
@@ -29,11 +30,17 @@ const string getName() const{
 void setAge(const int newAge){
     this->age = newAge;
 }
-const int getID() const{
+const int getAge() const{
     return this->age;
 }
 
 //////////////////////////// Age getter and setter /////
+void setID(const int newID){
+    this->ID = newID;
+}
+const int getID() const{
+    return this->ID;
+}
 //////////////////////////// Course getter and setter /////
 void setCourse(const string newCourse){
     this->course = newCourse;
@@ -81,14 +88,14 @@ cout << name <<" Joins " << club <<endl;
 ///////////////////////// Display//////////////////////////////
     void display() const{
         displayCounter ++;
-        cout << "\n\nStudent details:\n\n" << "Name:" << this->name << "\nCourse: " << this->course << "\nAge: " << this->age << "Chronic Ilness: "<< this->chronicIlness << "CGPA: "<< this->CGPA << "\nDisplay_Count: " << this->displayCounter <<"\n" <<endl;
+        cout << "\n\nStudent details:\n\n" << "Name:" << this->name << "\nCourse: " << this->course << "\nID: " << this->ID << "\nAge: " << this->age << "Chronic Ilness: "<< this->chronicIlness << "CGPA: "<< this->CGPA << "\nDisplay_Count: " << this->displayCounter <<"\n" <<endl;
     }
 ///////////////////////// Display//////////////////////////////
 
 };
 
 int main(){
-    int ID;
+    int ID, age;
     string name, course, club;
     bool chronicIlness;
     float CGPA;
@@ -99,8 +106,12 @@ cout << "Course: " << endl;
 cin >> course;
 cout << "ID: " << endl;
 cin >> ID;
+cout << "Age: " << endl;
+cin >> age;
 cout << "Chrinic Ilness? (Yes: 1 or No : 0): " << endl;
 cin >> chronicIlness;
+cout << "CGPA: " << endl;
+cin >> CGPA;
 cout <<"Class you take: "<< endl;
 cin>> course;
 cout << "Club you want to join:  " << endl;
@@ -109,7 +120,8 @@ cin >> club;
 Student student;
 student.setName(name);
 student.setCourse(course);
-student.setAge(ID);
+student.setAge(age);
+student.setID(ID);
 student.setChronicIlness(chronicIlness);
 student.setCGPA(CGPA);
 student.display();
