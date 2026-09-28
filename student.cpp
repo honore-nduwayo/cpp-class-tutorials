@@ -11,51 +11,53 @@ class Student{
     int age;
     float CGPA;
     bool chronicIlness;
+    static int studentCounter;
+    mutable int displayCounter = 0;
 
 //////////////////////////////////////////////////////////////////////////////////////////////SETTERS AND GETTERS///////////////////////////////////////////////
 public:
 //////////////////////////// name getter and setter /////
-void setName(string newName){
+void setName(const string newName){
     this->name = newName;
 }
-string getName(){
+const string getName() const{
     return this->name;
 }
 //////////////////////////// name getter and setter /////
 //////////////////////////// Age getter and setter /////
 
-void setAge( int newAge){
+void setAge(const int newAge){
     this->age = newAge;
 }
-int getID(){
+const int getID() const{
     return this->age;
 }
 
 //////////////////////////// Age getter and setter /////
 //////////////////////////// Course getter and setter /////
-void setCourse(string newCourse){
+void setCourse(const string newCourse){
     this->course = newCourse;
 }
-string getCourse(){
+const string getCourse() const{
     return this->course;
 }
 //////////////////////////// Course getter and setter /////
 //////////////////////////// Chronic disease getter and setter /////
 
-void setChronicIlness( bool newBool){
+void setChronicIlness(const bool newBool){
     this->chronicIlness = newBool;
 }
-bool getChronicIlness(){
+const bool getChronicIlness() const{
     return this->chronicIlness;
 }
 
 //////////////////////////// Chronic disease getter and setter /////
 //////////////////////////// CGPA getter and setter /////
 
-void setCGPA( float newCGPA){
+void setCGPA(const float newCGPA){
     this->CGPA = newCGPA;
 }
-float getCGPA(){
+const float getCGPA() const{
     return this->CGPA;
 }
 //////////////////////////// CGPA disease getter and setter /////
@@ -77,8 +79,9 @@ cout << name <<" Joins " << club <<endl;
 }
 ///////////////////////// Join Club //////////////////////////////
 ///////////////////////// Display//////////////////////////////
-    void display(){
-        cout << "\n\nStudent details:\n\n" << "Name:" << name << "\nCourse: " << course << "\nAge: " << age << "Chronic Ilness: "<< chronicIlness << "CGPA: "<< CGPA <<"\n" <<endl;
+    void display() const{
+        displayCounter ++;
+        cout << "\n\nStudent details:\n\n" << "Name:" << this->name << "\nCourse: " << this->course << "\nAge: " << this->age << "Chronic Ilness: "<< this->chronicIlness << "CGPA: "<< this->CGPA << "\nDisplay_Count: " << this->displayCounter <<"\n" <<endl;
     }
 ///////////////////////// Display//////////////////////////////
 

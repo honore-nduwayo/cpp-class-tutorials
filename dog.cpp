@@ -12,8 +12,8 @@ public:
 
 ///////////// Behaviors//////
 //bark
-void bark() {
-    cout << name << "says Woof\n" << endl << "They're only " << age << endl;
+void bark() const{
+    cout << this->name << "says Woof\n" << endl << "They're only " << this->age << endl;
 }
 
 ///DISPLAY BIO// function prototype
@@ -42,7 +42,7 @@ const int getAge() const{
 
 };
 
-void displayBio(Dog d){
+void displayBio(const Dog d){
 cout << "-------------Bio-------------------\n" << "Name: "<< d.getName()<< "\n Age: " << d.getAge()<< "\nAge_count: " << d.getAgeCounter << "\nName_Count:" << d.getNameCounter << endl;
 };
 
