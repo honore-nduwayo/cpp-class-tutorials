@@ -1,0 +1,15 @@
+# Upload only the code and notes, never the compiled programs (a.out, dog, hello, ...).
+# Ignore everything...
+*
+# ...except folders, C/C++ sources and headers, notes, text files and build files.
+!*/
+!*.cpp
+!*.cc
+!*.c
+!*.h
+!*.hpp
+!*.md
+!*.txt
+!Makefile
+!.gitignore
+!.vscode/*.json
