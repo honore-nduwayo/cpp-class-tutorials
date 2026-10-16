@@ -1,64 +1,23 @@
 #include <iostream>
 using namespace std;
 
+int main() {
+    int choice;
+    cout << "Enter a positive number" << endl;
+    cin >> choice;
 
+    int n = choice % 100;   // 111 -> 11, 213 -> 13, 101 -> 1
+    if (n > 20) {
+        n = n % 10;         // 21 -> 1, 45 -> 5
+    }
 
+    cout << choice;
+    switch (n) {
+        case 1:  cout << "st" << endl; break;
+        case 2:  cout << "nd" << endl; break;
+        case 3:  cout << "rd" << endl; break;
+        default: cout << "th" << endl; break;
+    }
 
-void suffix(int choice){
-
-if (choice >20){
-    choice = choice % 10;
-}
-
-switch (choice)
-{
-case 1:
-    cout << "st"<< endl;
-    break;
-case 2:
-    cout <<"nd" << endl;
-    break;
-case 3:
-    cout << "rd" << endl;
-    break;
-case 11:
-    cout << "th" << endl;
-    break;
-case 12:
-    cout << "th" << endl;
-    break;
-case 13:
-    cout << "th" <<endl;
-    break;
-case 14:
-    cout  << "th" << endl;
-    break;
-case 15:
-    cout  << "th" << endl;
-    break;
-case 16:
-    cout  << "th" << endl;
-    break;
-case 17:
-    cout  << "th" << endl;
-    break;
-case 18:
-    cout  << "th" << endl;
-    break;
-case 19:
-    cout<< "th" << endl;
-    break;
-default:
-    cout << "th" << endl;
-    break;
-}
-}
-
-int main(){
-int choice;
-cout << "Enter your input between 1 and 10"<< endl;
-cin >> choice;
-cout <<choice;
-suffix(choice);
     return 0;
 }
