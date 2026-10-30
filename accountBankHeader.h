@@ -10,13 +10,13 @@ double balance{};
 public:
 Account() = default;
 //Constructor (FASTER)- SLOW IS Account(){}
-//--------OLD WAY -------------
-Account(std::string name, double balance){
-name = "unknown";
-balance = 0.0;
-//Body
-///Inititialization happens inside the body and it's slow
-}
+// //--------OLD WAY -------------
+// Account(std::string name, double balance){
+// name = "unknown";
+// balance = 0.0;
+// //Body
+// ///Inititialization happens inside the body and it's slow
+// }
 //--------NEW APPROACH---------------
 Account(std::string name, double balance)
    :name{name}, balance{balance}///Inititialization happens inside the definition and it's fast
@@ -24,9 +24,8 @@ Account(std::string name, double balance)
 //Body
 }
 
-Account(std::string name): name{name}{
-   
-}
+Account(std::string name): name{name}
+{}
 
 
 /// prototype setter and getters

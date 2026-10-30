@@ -5,7 +5,7 @@
 int main()
 {
     //////////////////////////////////////////////////////////////////////////////////////////////CASE STUDY A///////////////////////////////////////////////
-    std::cout << "----- CASE STUDY A -----" << std::endl;
+    std::cout << "CASE STUDY A" << std::endl;
     Account myAccount{};
 
     // Initial name, before any value is assigned
@@ -20,7 +20,7 @@ int main()
     // potential leak if no const was there: // myAccount.getName() = "Hacker";
 
     //////////////////////////////////////////////////////////////////////////////////////////////CHALLENGE 1///////////////////////////////////////////////
-    std::cout << "\n----- CHALLENGE 1 -----" << std::endl;
+    std::cout << "\nCHALLENGE 1" << std::endl;
     Account anotherAccount{};
     anotherAccount.setName("Ama Mensah");
 
@@ -29,7 +29,7 @@ int main()
     std::cout << "anotherAccount name: " << anotherAccount.getName() << std::endl;
 
     //////////////////////////////////////////////////////////////////////////////////////////////CHALLENGE 2///////////////////////////////////////////////
-    std::cout << "\n----- CHALLENGE 2 -----" << std::endl;
+    std::cout << "\nCHALLENGE 2" << std::endl;
 
     // Print details of the person's account
     myAccount.display();
@@ -37,6 +37,7 @@ int main()
     myAccount.deposit(-200); // a. pass value -200 to deposit
     myAccount.deposit(0);    // b. pass value 0 to deposit
     myAccount.deposit(500);  // c. pass value 500 to deposit
+    myAccount.withdraw(5000); 
 
     // d. display account details
     myAccount.display();
